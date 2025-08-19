@@ -1,4 +1,4 @@
-# simple two link robotic arm inverse kinematics sim
+# simple two link robotic arm inverse kinematics sim code
 import math
 import matplotlib.pyplot as plt
 
@@ -17,7 +17,7 @@ b = math.atan2(y, x)
 theta1 = b - a
 theta2 = math.acos((L1**2 + L2**2 - d**2) / (2*L1*L2))
 
-# forward kinematics for plottinh
+# forward kinematics for plotting
 x0, y0 = 0, 0
 x1, y1 = L1*math.cos(theta1), L1*math.sin(theta1)
 x2, y2 = x1 + L2*math.cos(theta1), L1*math.sin(theta1)
@@ -28,4 +28,3 @@ plt.scatter([x], [y], color = 'red') # target
 plt.axis('equal')
 plt.title("Two Link Robotic Arm Reaching Target")
 plt.show()
-              
